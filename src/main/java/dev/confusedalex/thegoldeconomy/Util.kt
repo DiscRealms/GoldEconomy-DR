@@ -18,8 +18,7 @@ class Util(private val plugin: TheGoldEconomy) {
     fun colorCurrency(gold: Number): String = "" + ChatColor.GOLD + gold + ChatColor.WHITE
 
     fun formatMessage(message: String): String =
-        ChatColor.GOLD.toString() + (plugin.config.getString("prefix")
-            ?: "Bank") + " » " + ChatColor.WHITE + message
+        ChatColor.GOLD.toString() + ChatColor.BOLD.toString() + "Bank" + ChatColor.GOLD.toString() + " » " + ChatColor.WHITE + message
 
     fun isBankingRestrictedToPlot(player: Player): Boolean {
         if (plugin.config.getBoolean("restrictToBankPlot")) {
